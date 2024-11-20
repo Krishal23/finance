@@ -1,0 +1,301 @@
+/* General Styles */
+html, body {
+    height: auto; /* Allow the body to grow with content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* About Us Section */
+.aboutUs {
+    padding: 4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff6347; /* Primary color for headings */
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Vision Section */
+.visionSection {
+    margin: 3rem 0;
+}
+
+/* Team Section */
+.teamSection {
+    margin: 3rem 0;
+}
+
+.teamImageWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.teamImage {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Values Section */
+.valuesSection {
+    margin: 3rem 0;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.valueItem {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #ff6347; /* Primary color for value items */
+    color: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.valueItem:hover {
+    transform: translateY(-10px);
+}
+
+.valueItem h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+    margin: 3rem 0;
+    background-color: #f4f4f9;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.testimonial {
+    max-width: 400px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ff6347; /* Color for testimonials */
+}
+
+/* Call-to-Action */
+.membership {
+    margin-top: 3rem;
+    background-color: #f4f4f9;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.joinButton {
+    display: inline-block;
+    background-color: #ff6347; /* Primary button color */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.joinButton:hover {
+    background-color: #ff4500; /* Button hover color */
+}
+
+/* Light Theme */
+.light {
+    background: linear-gradient(to right, #f9f9fb, #ececf0);
+    color: #333;
+}
+
+/* Dark Theme with Green Enhancements */
+.dark {
+    background: linear-gradient(to right, #0f0f0f, #1c1c1c); /* Darker base with subtle gradient */
+    color: #e0e0e0; /* Lighter text for readability */
+}
+
+.dark h1, .dark h2, .dark h3 {
+    color: #32cd32; /* Green shade for primary headings */
+}
+
+.dark .valueItem {
+    background-color: #202020; /* Dark background for value items */
+    color: #a0d36a; /* Soft green for text */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    border-left: 5px solid #228b22; /* Green border for value items */
+}
+
+.dark .valueItem:hover {
+    transform: translateY(-12px);
+    background-color: #96e89637; /* Green hover effect */
+    color: #fff; /* White text for contrast on hover */
+}
+
+.dark .testimonialsSection {
+    background-color: #242424; /* Softer dark background */
+    color: #e0e0e0;
+    border-left: 5px solid #32cd32; /* Green border to emphasize section */
+}
+
+.dark .membership {
+    background-color: #242424; /* Dark background for call-to-action */
+    color: #e0e0e0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 20px; /* Rounded corners for smooth UI */
+}
+
+.dark .joinButton {
+    background: linear-gradient(135deg, #32cd32, #228b22); /* Green gradient for buttons */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dark .joinButton:hover {
+    background-color: #228b22; /* Dark green hover effect */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.dark p {
+    color: #b8d28b; /* Greenish light paragraph text */
+}
+
+.dark .teamImage {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow for images */
+}
+
+/* Icon Enhancements */
+.dark .icon {
+    color: #32cd32; /* Green for icons */
+}
+
+/* Hover Effects for Links */
+.dark a:hover {
+    color: #82ce82; /* Green hover color for links */
+}
+
+
+.collaborationCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg, #ffffff);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaborationCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+}
+
+.logo {
+    flex: 0 0 auto;
+    width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* background-color: #f4f4f9; */
+}
+
+.textContent {
+    flex: 1;
+}
+
+.textContent h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text, #333);
+}
+
+.textContent p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--secondary-text, #666);
+}
+
+@media (max-width: 768px) {
+    .cardContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.dark .collaborationCard {
+    background-color: #24242446;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.dark .textContent h2 {
+    color: #32cd32;
+}
+
+.dark .textContent p {
+    color: #b8d28b;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .values, .testimonials {
+        flex-direction: column;
+        gap: 1rem; /* Adjust gap for smaller screens */
+    }
+}
