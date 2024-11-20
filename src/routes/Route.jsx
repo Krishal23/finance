@@ -37,7 +37,7 @@ function AppRoutes() {
     const fetchEvents = async () => {
       console.log("1")
       try {
-        const response = await fetch('http://localhost:5000/get-events', {
+        const response = await fetch('https://helios-server.onrender.com/get-events', {
           method: 'GET',
           credentials: 'include', // Include session cookies
         });
@@ -69,7 +69,7 @@ function AppRoutes() {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await fetch('http://localhost:5000/get-expenses', {
+        const response = await fetch('https://helios-server.onrender.com/get-expenses', {
           method: 'GET',
           credentials: 'include', // Include session cookies
         });
@@ -99,7 +99,7 @@ function AppRoutes() {
     const fetchBudget = async () => {
         console.log("1")
         try {
-            const response = await fetch('http://localhost:5000/budget', {
+            const response = await fetch('https://helios-server.onrender.com/budget', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -126,43 +126,13 @@ function AppRoutes() {
     fetchBudget();
 }, [budget]);
 
-// useEffect(()=>{
-//   const isMember = async()=>{
-//     try {
-//       const response = await fetch('http://localhost:5000/me', {
-//           method: 'GET',
-//           headers: {
-//               'Content-Type': 'application/json',
-//           },
-//           credentials: 'include' // Ensure credentials are sent
-//       });
-//       console.log("2", response)
-
-//       if (!response.ok) {
-//           const errorData = await response.json();
-//           console.log(errorData.message);
-//           return;
-//       }
-
-//       const data = await response.json();
-//       console.log(data,"usergsdfg")
-      
-//   } catch (error) {
-//       console.error('Error fetching user:', error);
-//   }
-  
-//   }
-//   isMember();
-// })
-
-
 
 
 
   const handleBudgetChange = async (newBudget) => {
     console.log('Updating budget to:', newBudget); // Log the budget being sent
     try {
-      const response = await fetch(`http://localhost:5000/budget`, {
+      const response = await fetch(`https://helios-server.onrender.com/budget`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

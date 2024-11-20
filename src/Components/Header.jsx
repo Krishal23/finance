@@ -45,7 +45,7 @@ function Header() {
     useEffect(() => {
         const checkUserSession = async () => {
             try {
-                const response = await fetch('http://localhost:5000/me', {
+                const response = await fetch('https://helios-server.onrender.com/me', {
                     credentials: 'include' // Ensure credentials are sent
                 });
                 if (response.ok) {
