@@ -42,7 +42,7 @@ function Footer() {
                 </div>
             </div>
             <div className={styles.copyright}>
-                <p>© 2024 Your Company. All rights reserved.</p>
+                <p>© 2024 Helios. All rights reserved.</p>
             </div>
         </footer>
     );
