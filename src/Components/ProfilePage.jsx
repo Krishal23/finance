@@ -5,7 +5,7 @@ import styles from './styles/ProfilePage.module.css';
 function ProfilePage({ closePopup }) {
     const { logout } = useAuth(); // Get logout function from context
     const [isEditing, setIsEditing] = useState(false); // State to toggle between view/edit modes
-    const [profile, setProfile] = useState(null); // Initially null to indicate loading state
+    const [profile, setProfile] = useState(); // Initially null to indicate loading state
     const [loading, setLoading] = useState(true); // Loading state for data fetching
     const [error, setError] = useState(null); // Error state for any API issues
 
@@ -13,11 +13,15 @@ function ProfilePage({ closePopup }) {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
+                console.log("sgdrfgb chimmm")
                 const response = await fetch('https://helios-server.onrender.com/me', {
                     credentials: 'include', // Important for sending session cookies
                 });
+                console.log("fsddgb dapak dum ", response)
+                
                 const data = await response.json();
                 if (data.success) {
+                    console.log("fsddgb ullluuuu dum ", data)
                     setProfile(data.user);
                 } else {
                     setError(data.message);
